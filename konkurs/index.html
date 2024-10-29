@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Pool</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url("background 1.png"); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            margin: 0 auto;
+            max-width: 1280px;
+            max-height: 100%;
+        }
+        .header_content {
+            display: flex;
+            justify-content: space-between;
+        }
+        nav a {
+            text-decoration: none;
+            color: #666565;
+            margin: 0 15px;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        .button a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #666565;
+            padding: 15px 30px;
+            border-radius: 133px;
+        }
+        .main_content {
+            display: flex; 
+            flex-direction: column; 
+            align-items: flex-end; 
+            text-align: right;
+        }
+        .text {
+            color: #fff;
+            font-size: 34px;
+            margin-bottom: 20px;
+            margin-right: 100px;
+            cursor: pointer; /* Indicate clickable */
+        }
+        .button {
+            margin-right: 100px;
+        }
+        .promotions {
+            display: none; /* Initially hidden */
+        }
+        .footer_content {
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        .social img {
+            max-width: 30px;
+            max-height: 30px;
+            margin-right: 40px;
+        }
+        .social img:first-of-type {
+            margin-left: 40px;
+        }
+        .link {
+            display: flex;
+            align-items: center;
+        }
+        .link img {
+            max-width: 30px;
+            max-height: 30px;
+            margin-right: 10px;
+        }
+        details {
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header_content">
+            <img src="FlightPooll.png" alt="Logo">
+            <nav>
+                <a href="#">Поиск</a>
+                <a href="#" onclick="togglePromotions(event)">Акции</a>
+                <a href="#">Регистрация на рейс</a>
+                <a href="#">Личный кабинет</a>
+            </nav>
+        </div>
+    </div>
+</header>  
+
+<main>
+    <div class="container">
+        <div class="main_content">
+            <div class="text" onclick="togglePromotions(event)">
+                <h1>Мы сближаем <br> города, вы живете <br> там где хотите</h1>
+            </div>
+            
+            <div class="button">
+                <a href="#">Оставить заявку</a>
+            </div>
+
+            <div class="promotions">
+                <details>
+                    <summary>Летняя акция</summary>
+                    <img src="promo1-image.png" alt="Акция 1" class="test-0-ai">
+                    <h2 class="test-0-an">Полет летом со скидкой в 30%</h2>
+                    <p class="test-0-ad">Совершая полет в летнее время вы получаете скидку.</p>
+                    <button class="test-0-abm">Посмотреть акцию</button>
+                </details>
+                <details>
+                    <summary>Сентяборьская неделя</summary>
+                    <img src="promo2-image.png" alt="Акция 2" class="test-0-ai">
+                    <h2 class="test-0-an">Сентяборьская неделя</h2>
+                    <p class="test-0-ad">Каждый год мы предоставляем всем скидку для полета в сентебре месяце .</p>
+                    <button class="test-0-abm">Посмотреть акцию</button>
+                </details>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer_content">
+            <div class="social">
+                <img src="WK.png" alt="VK">
+                <img src="Youtube.png" alt="YouTube">
+                <img src="Tik-tok.png" alt="TikTok">
+                <img src="instagram.png" alt="Instagram">
+            </div>
+            <div class="link">
+                <img src="phone.png" alt="Phone">
+                <p>8(800)100-10-10</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function togglePromotions(event) {
+        const textElement = document.querySelector('.text');
+        const promotionsElement = document.querySelector('.promotions');
+        
+        // Toggle visibility of text and promotions
+        if (promotionsElement.style.display === "none" || promotionsElement.style.display === "") {
+            promotionsElement.style.display = "block";
+            textElement.style.display = "none";
+        } else {
+            promotionsElement.style.display = "none";
+            textElement.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
